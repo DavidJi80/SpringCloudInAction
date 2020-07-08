@@ -1,4 +1,4 @@
-package net.tongark.springcloud.eurekaserverprovider.model;
+package net.tongark.springcloud.eurakaconsumerfeign.model;
 
 public class User {
     private String name;

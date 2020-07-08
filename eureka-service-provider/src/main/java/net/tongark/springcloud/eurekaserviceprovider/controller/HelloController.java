@@ -1,7 +1,7 @@
-package net.tongark.springcloud.eurekaserverprovider.controller;
+package net.tongark.springcloud.eurekaserviceprovider.controller;
 
 
-import net.tongark.springcloud.eurekaserverprovider.model.User;
+import net.tongark.springcloud.eurekaserviceprovider.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
@@ -17,10 +17,12 @@ public class HelloController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello() throws Exception {
-   /*     //让处理线程等待几秒钟
+        /*
+        //让处理线程等待几秒钟
         int sleepTime=new Random().nextInt(3000);
         logger.info("sleepTime:"+sleepTime);
-        Thread.sleep(sleepTime);*/
+        Thread.sleep(sleepTime);
+        */
         return "Hello World";
     }
 
@@ -29,12 +31,12 @@ public class HelloController {
         return "Hello " + name;
     }
 
-/*    @RequestMapping(value = "/hello2", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello2", method = RequestMethod.GET)
     public User hello(@RequestParam String name, @RequestParam Integer age){
         return new User(name, age);
-    }*/
+    }
 
-    @RequestMapping(value = "/hello3", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello3", method = RequestMethod.POST)
     public String hello(@RequestBody User user) {
         return "Hello " + user.getName() + ", " + user.getAge();
     }

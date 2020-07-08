@@ -1,4 +1,4 @@
-package net.tongark.springcloud.eurekaserverprovider;
+package net.tongark.springcloud.eurekaserviceprovider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaServerProviderApplication {
+public class EurekaServiceProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerProviderApplication.class, args);
+        SpringApplication.run(EurekaServiceProviderApplication.class, args);
     }
 
 }

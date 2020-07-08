@@ -1,7 +1,7 @@
 /.idea/*
 /eureka-server/target/*
 /eureka-config-server/target/*
-/eureka-server-provider/target/*
+/eureka-service-provider/target/*
 /eureka-config-client/target/*
 /eureka-consumer-feign/target/*
 /eureka-sleuth-trace1/target/*
@@ -12,3 +12,5 @@
 /consul-consumer/target/*
 /zookeeper-consumer/target/*
 /zookeeper-producer/target/*
+
+
