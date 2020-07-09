@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "HELLO-SERVICE")   //指定服务名来绑定服务
+//指定服务名来绑定服务
+@FeignClient(value = "HELLO-SERVICE",fallback = HelloServiceFallback.class)
 public interface HelloService extends StudentService {
     //使用Spring MVC注释来绑定具体该服务提供的REST接口
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
