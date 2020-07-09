@@ -12,5 +12,4 @@
 /consul-consumer/target/*
 /zookeeper-consumer/target/*
 /zookeeper-producer/target/*
-
-
+/service-hello-api/target/*
