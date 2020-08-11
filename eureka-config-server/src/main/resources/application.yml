@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/DavidJi80/SpringCloudInAction/
+          search-paths: config-repo
+          default-label: master
+          skip-ssl-validation: true       #跳过SSL证书验证
+          timeout: 4                      #HTTP连接超时
+          force-pull: true                #强制导入Git存储库
+          delete-untracked-branches: true #删除Git存储库中未跟踪的分支
+          refresh-rate: 0                 #Git刷新率
+        health:               #健康指示器
+          repositories:
+            didispace:
+              label: master
+server:
+  port: 6001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:1111/eureka/

@@ -11,7 +11,7 @@
     <groupId>net.tongark.springcloud</groupId>
     <artifactId>eureka-service-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-server-provider</name>
+    <name>eureka-service-provider</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
