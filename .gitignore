@@ -1,15 +1,2 @@
 /.idea/*
-/eureka-server/target/*
-/eureka-config-server/target/*
-/eureka-service-provider/target/*
-/eureka-config-client/target/*
-/eureka-consumer-feign/target/*
-/eureka-sleuth-trace1/target/*
-/eureka-sleuth-trace2/target/*
-/eureka-messaging-stream/target/*
-/eureka-messaging-bus/target/*
-/consul-producer/target/*
-/consul-consumer/target/*
-/zookeeper-consumer/target/*
-/zookeeper-producer/target/*
-/service-hello-api/target/*
+/*/target/*

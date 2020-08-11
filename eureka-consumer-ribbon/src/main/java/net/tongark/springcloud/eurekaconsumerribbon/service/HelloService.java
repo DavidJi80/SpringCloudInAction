@@ -14,6 +14,11 @@ public class HelloService {
     @Autowired
     RestTemplate restTemplate;
 
+    /**
+     * @HystrixCommand是由一个名为“javanica”的Netflix库提供的。
+     *
+     * @return
+     */
     @HystrixCommand(fallbackMethod = "helloFallback", commandKey = "helloKey")
     public String helloService() {
         long start = System.currentTimeMillis();
