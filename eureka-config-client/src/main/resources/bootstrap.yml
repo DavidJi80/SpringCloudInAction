@@ -7,12 +7,12 @@ spring:
     config:
       uri: http://127.0.0.1:6001/
       fail-fast: true
-      retry:  #重试
+      retry:
         max-attempts: 6
         initial-interval: 1000
         max-interval: 2000
         multiplier: 1.1
-      request-connect-timeout: 0  #连接超时
-      request-read-timeout: 0     #读取超时
+      request-connect-timeout: 0
+      request-read-timeout: 0
 server:
   port: 7001
