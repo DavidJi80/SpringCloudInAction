@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hello-service
+server:
+  port: 2001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:1111/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,hystrix.stream   #HystrixÖ¸±êÁ÷

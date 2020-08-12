@@ -1,9 +1,6 @@
 package net.tongark.springcloud.eurekaserviceprovider.controller;
 
-
 import net.tongark.springcloud.eurekaserviceprovider.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Logger;
@@ -11,9 +8,6 @@ import java.util.logging.Logger;
 @RestController
 public class HelloController {
     private final Logger logger = Logger.getLogger(String.valueOf(getClass()));
-
-    @Autowired
-    private DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello() throws Exception {

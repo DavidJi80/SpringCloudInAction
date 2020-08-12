@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient  //注册为Eureka客户端应用，获取服务发现能力
 @SpringBootApplication
 @EnableCircuitBreaker   //开启Hystrix断路器功能
-@EnableHystrixDashboard
+@EnableHystrixDashboard //开启Hystrix仪表盘
 public class EurekaConsumerRibbonApplication {
 
     @Bean           //创建RestTemplate的Spring Bean实例

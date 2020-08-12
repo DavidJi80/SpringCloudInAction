@@ -40,4 +40,5 @@ public class HelloServiceFallback implements HelloService{
     public String helloStudent(Student student) {
         return "error";
     }
+
 }

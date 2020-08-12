@@ -2,7 +2,7 @@ spring:
   cloud:
     loadbalancer:
       ribbon:
-        enabled: false #禁用Ribbon
+        enabled: true #Ribbon开关
   application:
     name: ribbon-consumer
 server:
@@ -21,7 +21,8 @@ eureka:
       defaultZone: http://127.0.0.1:1111/eureka
       #defaultZone属性区分大小写，需要驼峰大小写，因为serviceUrl属性是Map<String, String>;
       # 因此，defaultZone属性并不遵循正常的Spring引导默认区域的蛇形惯例。
-    register-with-eureka: false
+    register-with-eureka: true
+    fetch-registry: true
 
 management:
   endpoints:

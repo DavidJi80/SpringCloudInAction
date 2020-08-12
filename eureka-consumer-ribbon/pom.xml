@@ -27,6 +27,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <!-- 不使用Ribbon
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.cloud</groupId>
@@ -37,9 +38,16 @@
                     <artifactId>ribbon-eureka</artifactId>
                 </exclusion>
             </exclusions>
+            -->
         </dependency>
 
-        <!-- Hystrix -->
+        <!-- Ribbon -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+
+        <!-- Hystrix & hystrix-dashboard -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
@@ -49,7 +57,7 @@
             <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
         </dependency>
 
-
+        <!-- Actuator -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

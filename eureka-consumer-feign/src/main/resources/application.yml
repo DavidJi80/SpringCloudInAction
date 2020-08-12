@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false  #关闭ribbon，使用Spring Cloud LoadBalancer
+  application:
+    name: feign-consumer
+server:
+  port: 4001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:1111/eureka
+feign:
+  compression:
+    request:
+      enabled: true #启用请求压缩
+      mime-types: text/xml,application/xml,application/json #压缩媒体类型
+      min-request-size: 2048  #最小请求阈值长度
+    response:
+      enabled: true         #启用响应压缩
+      useGzipDecoder: true  #启用请求压缩
+  hystrix:
+    enabled: true #打开Feign对Hystrix的支持
